@@ -6,20 +6,20 @@ class NlpProcessor {
         this.manager = new NlpManager({ languages: ['es'] });
     }
 
-    cargarEjemplos(intenciones, respuestas) {
-        intenciones.forEach((intencion, index) => {
+    async loadTrainingData(intenciones, respuestas) {
+        await intenciones.forEach((intencion, index) => {
             this.manager.addDocument('es', intencion, respuestas[index]);
         });
     }
 
-    async entrenarModelo() {
+    async modelTraining() {
         await this.manager.train();
         this.manager.save();
         console.log('Modelo entrenado y guardado.');
     }
     async processMssg(texto) {
         const secund = await this.manager.process('es', 'hola')
-        const secundAns = await secund.intent;
+        const secundAns = await secund;
         console.log('adentro del prc', secundAns);
 
         const response = await this.manager.process('es', texto);
