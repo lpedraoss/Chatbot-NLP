@@ -1,0 +1,12 @@
+{
+    "intenciones": [
+        "¿Cómo puedo solicitar una beca?",
+        "¿Cuándo es la fecha límite para inscribirse en los cursos?",
+        "¿Hay servicios de tutoría disponibles para los estudiantes?"
+    ],
+    "respuestas": [
+        "Para solicitar una beca, debes completar el formulario de solicitud que se encuentra en el sitio web de la institución. Asegúrate de proporcionar todos los documentos requeridos.",
+        "La fecha límite para inscribirse en los cursos varía según el semestre. Te recomiendo consultar el calendario académico en el sitio web oficial de la universidad para obtener esa información.",
+        "Sí, la universidad ofrece servicios de tutoría gratuitos para los estudiantes. Puedes programar una sesión de tutoría a través del sistema en línea o visitar el centro de tutoría en el campus."
+    ]
+}
