@@ -6,3 +6,6 @@
 
 
 Este es un proyecto, que se desarrolló con la intencion de orientar a los estudiantes, por medio de un chatbot que responde en lenguaje natural
+recuerda instalar las dependencias de npm
+ - NLP.js
+ - firebase
