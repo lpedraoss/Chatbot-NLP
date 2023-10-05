@@ -6,3 +6,4 @@ bot_sessions/
 # Ignora otras configuraciones
 firebaseConfig.js
 model.nlp
+core.class.log
