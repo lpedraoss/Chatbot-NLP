@@ -6,6 +6,7 @@
 
 
 Este es un proyecto, que se desarrolló con la intencion de orientar a los estudiantes, por medio de un chatbot que responde en lenguaje natural
-recuerda instalar las dependencias de npm
+Recuerda instalar las dependencias:
  - NLP.js
  - firebase
+ y suministrar los permisos para firebase
