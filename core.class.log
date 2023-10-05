@@ -2,15 +2,15 @@
   key: {
     remoteJid: '573203133976@s.whatsapp.net',
     fromMe: false,
-    id: 'AB40A1F963928AC538112A6837685BFA',
+    id: '3D876B338C6C43D1F9A3B797B59CC85D',
     participant: undefined
   },
-  messageTimestamp: 1696138969,
+  messageTimestamp: 1696519121,
   pushName: 'Mr Tardes 😎',
   broadcast: false,
   message: Message {
     extendedTextMessage: ExtendedTextMessage {
-      text: 'Hola estas ahií',
+      text: 'Hola',
       previewType: 0,
       contextInfo: [ContextInfo],
       inviteLinkGroupTypeV2: 0
@@ -20,22 +20,22 @@
       deviceListMetadataVersion: 2
     }
   },
-  body: 'Hola estas ahií',
+  body: 'Hola',
   from: '573203133976'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '573203133976@s.whatsapp.net',
     fromMe: false,
-    id: '883BB77BB1F93267A888A8FF14117727',
+    id: '422CAD7FFDCB49BB7F5787BBB6248F04',
     participant: undefined
   },
-  messageTimestamp: 1696138990,
+  messageTimestamp: 1696519126,
   pushName: 'Mr Tardes 😎',
   broadcast: false,
   message: Message {
     extendedTextMessage: ExtendedTextMessage {
-      text: 'Bien, quiero saber sobre la facultad',
+      text: 'Ejjeje',
       previewType: 0,
       contextInfo: [ContextInfo],
       inviteLinkGroupTypeV2: 0
@@ -45,22 +45,22 @@
       deviceListMetadataVersion: 2
     }
   },
-  body: 'Bien, quiero saber sobre la facultad',
+  body: 'Ejjeje',
   from: '573203133976'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '573203133976@s.whatsapp.net',
     fromMe: false,
-    id: '971E12F16EF475078725786EB1EA2F03',
+    id: '4C2CB7A0687EF30308724334BD1D7C54',
     participant: undefined
   },
-  messageTimestamp: 1696139004,
+  messageTimestamp: 1696519132,
   pushName: 'Mr Tardes 😎',
   broadcast: false,
   message: Message {
     extendedTextMessage: ExtendedTextMessage {
-      text: 'Que clase de apoyos',
+      text: 'Quiero saber sobre Facultad',
       previewType: 0,
       contextInfo: [ContextInfo],
       inviteLinkGroupTypeV2: 0
@@ -70,131 +70,6 @@
       deviceListMetadataVersion: 2
     }
   },
-  body: 'Que clase de apoyos',
-  from: '573203133976'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '573203133976@s.whatsapp.net',
-    fromMe: false,
-    id: '3DC22473D731B6B2FC34C7FC24D86B72',
-    participant: undefined
-  },
-  messageTimestamp: 1696139022,
-  pushName: 'Mr Tardes 😎',
-  broadcast: false,
-  message: Message {
-    extendedTextMessage: ExtendedTextMessage {
-      text: 'Y en becas?',
-      previewType: 0,
-      contextInfo: [ContextInfo],
-      inviteLinkGroupTypeV2: 0
-    },
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Y en becas?',
-  from: '573203133976'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '573203133976@s.whatsapp.net',
-    fromMe: false,
-    id: '7911D9F175041DC1387FBCBF22CD7228',
-    participant: undefined
-  },
-  messageTimestamp: 1696139077,
-  pushName: 'Mr Tardes 😎',
-  broadcast: false,
-  message: Message {
-    extendedTextMessage: ExtendedTextMessage {
-      text: 'Te agradezco mucho con la ayuda',
-      previewType: 0,
-      contextInfo: [ContextInfo],
-      inviteLinkGroupTypeV2: 0
-    },
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Te agradezco mucho con la ayuda',
-  from: '573203133976'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '573203133976@s.whatsapp.net',
-    fromMe: false,
-    id: '7689939216CA434EE01F15917E71D4A9',
-    participant: undefined
-  },
-  messageTimestamp: 1696139088,
-  pushName: 'Mr Tardes 😎',
-  broadcast: false,
-  message: Message {
-    extendedTextMessage: ExtendedTextMessage {
-      text: 'Te debo una xd',
-      previewType: 0,
-      contextInfo: [ContextInfo],
-      inviteLinkGroupTypeV2: 0
-    },
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Te debo una xd',
-  from: '573203133976'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '573203133976@s.whatsapp.net',
-    fromMe: false,
-    id: '38DD3FB5978DBD409AB3F147DEA881B0',
-    participant: undefined
-  },
-  messageTimestamp: 1696139100,
-  pushName: 'Mr Tardes 😎',
-  broadcast: false,
-  message: Message {
-    extendedTextMessage: ExtendedTextMessage {
-      text: 'Muchísimas gracias',
-      previewType: 0,
-      contextInfo: [ContextInfo],
-      inviteLinkGroupTypeV2: 0
-    },
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Muchísimas gracias',
-  from: '573203133976'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '573203133976@s.whatsapp.net',
-    fromMe: false,
-    id: '294DA2F733E12C84C6081CACA4637A4F',
-    participant: undefined
-  },
-  messageTimestamp: 1696139132,
-  pushName: 'Mr Tardes 😎',
-  broadcast: false,
-  message: Message {
-    extendedTextMessage: ExtendedTextMessage {
-      text: 'Excelente :)',
-      previewType: 0,
-      contextInfo: [ContextInfo],
-      inviteLinkGroupTypeV2: 0
-    },
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Excelente :)',
+  body: 'Quiero saber sobre Facultad',
   from: '573203133976'
 }

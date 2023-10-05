@@ -1,20 +1,24 @@
-// nlpLoader.js
 const NlpProcessor = require('./NlpProcessor');
-const saludo = require('../mssg/saludo.json');
-const preguntaFacultad = require('../mssg/preguntaFacultad.json');
-const agradecimiento = require('../mssg/agradecimiento.json');
-const servicios = require('../mssg/servicios.json');
+const mockApi = require('../api/get_data');
 
 class NlpLoader {
     constructor() {
         this.nlpProcessor = new NlpProcessor();
     }
-    // Carga ejemplos de entrenamiento
+
+    // Carga ejemplos de entrenamiento desde la API
     async loadTrainingData() {
-        await this.nlpProcessor.loadTrainingData(servicios.intenciones, servicios.respuestas);
-        await this.nlpProcessor.loadTrainingData(saludo.intenciones, saludo.respuestas);
-        await this.nlpProcessor.loadTrainingData(preguntaFacultad.intenciones, preguntaFacultad.respuestas);
-        await this.nlpProcessor.loadTrainingData(agradecimiento.intenciones, agradecimiento.respuestas);
+        try {
+            const data = await mockApi.fetchData();
+
+            data.forEach(item => {
+                this.nlpProcessor.loadTrainingData(item.intenciones, item.respuestas);
+            });
+
+            console.log('Datos cargados desde la API exitosamente.');
+        } catch (error) {
+            console.error('Error al cargar los datos desde la API:', error.message);
+        }
     }
 
     async modelTraining() {

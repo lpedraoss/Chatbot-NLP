@@ -3,15 +3,11 @@ const { createBot, createProvider, createFlow, addKeyword, EVENTS } = require('@
 const QRPortalWeb = require('@bot-whatsapp/portal');
 const BaileysProvider = require('@bot-whatsapp/provider/baileys');
 const MockAdapter = require('@bot-whatsapp/database/mock');
-const { MSSG_STATE } = require('./mssg/mssg');
+const { MSSG_STATE } = require('./common/mssg.enum');
 const NlpLoader = require('./NLP/NlpLoader');
 
 // Crea una instancia de NlpLoader
 const nlpLoader = new NlpLoader();
-
-// Entrena el modelo
-nlpLoader.loadTrainingData();
-nlpLoader.modelTraining();
 
 const flowBienvenida = addKeyword(EVENTS.WELCOME)
     .addAnswer(MSSG_STATE.ALTERN, {
@@ -39,6 +35,10 @@ const flowBienvenida = addKeyword(EVENTS.WELCOME)
 
     });
 const main = async () => {
+
+    // Entrena el modelo
+    await nlpLoader.loadTrainingData();
+    await nlpLoader.modelTraining();
     const adapterDB = new MockAdapter()
     const adapterFlow = createFlow([flowBienvenida])
     const adapterProvider = createProvider(BaileysProvider)
