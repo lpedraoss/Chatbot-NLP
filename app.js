@@ -5,7 +5,8 @@ const BaileysProvider = require('@bot-whatsapp/provider/baileys');
 const MockAdapter = require('@bot-whatsapp/database/mock');
 const { MSSG_STATE } = require('./common/mssg.enum');
 const NlpLoader = require('./NLP/NlpLoader');
-
+const { initializeApp } = require('firebase/app');
+const firebaseConfig = require('./firebaseConfig')
 // Crea una instancia de NlpLoader
 const nlpLoader = new NlpLoader();
 
@@ -37,7 +38,7 @@ const flowBienvenida = addKeyword(EVENTS.WELCOME)
 const main = async () => {
 
     // Entrena el modelo
-    await nlpLoader.loadTrainingData();
+    await nlpLoader.loadTrainingDataFromFirebase();
     await nlpLoader.modelTraining();
     const adapterDB = new MockAdapter()
     const adapterFlow = createFlow([flowBienvenida])

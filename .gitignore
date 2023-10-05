@@ -2,6 +2,7 @@
 # Ignorar directorios de dependencias
 node_modules/
 bot_sessions/
+
 # Ignora otras configuraciones
 firebaseConfig.js
 model.nlp

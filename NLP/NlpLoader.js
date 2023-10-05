@@ -1,23 +1,37 @@
 const NlpProcessor = require('./NlpProcessor');
-const mockApi = require('../api/get_data');
+const mockApi = require('../api/mock_api');
+const firebaseApi = require('../api/firebase_api');
 
 class NlpLoader {
     constructor() {
         this.nlpProcessor = new NlpProcessor();
     }
 
-    // Carga ejemplos de entrenamiento desde la API
-    async loadTrainingData() {
+    /*     // Carga ejemplos de entrenamiento desde la API
+        async loadTrainingData() {
+            try {
+                const data = await mockApi.fetchData();
+    
+                data.forEach(item => {
+                    this.nlpProcessor.loadTrainingData(item.intenciones, item.respuestas);
+                });
+    
+                console.log('Datos cargados desde la API exitosamente.');
+            } catch (error) {
+                console.error('Error al cargar los datos desde la API:', error.message);
+            }
+        } */
+    async loadTrainingDataFromFirebase() {
         try {
-            const data = await mockApi.fetchData();
+            const data = await firebaseApi.getBrainData()
 
             data.forEach(item => {
                 this.nlpProcessor.loadTrainingData(item.intenciones, item.respuestas);
             });
 
-            console.log('Datos cargados desde la API exitosamente.');
+            console.log('Datos cargados desde Firebase exitosamente.');
         } catch (error) {
-            console.error('Error al cargar los datos desde la API:', error.message);
+            console.error('Error al cargar los datos desde Firebase:', error.message);
         }
     }
 

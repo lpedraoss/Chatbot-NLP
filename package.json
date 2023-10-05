@@ -17,6 +17,7 @@
         "@bot-whatsapp/portal": "latest",
         "@bot-whatsapp/provider": "latest",
         "compromise": "^14.10.0",
+        "firebase": "^10.4.0",
         "mysql2": "^2.3.3",
         "nlp": "^0.0.0",
         "node-nlp": "^4.27.0",
