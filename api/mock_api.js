@@ -1,7 +1,8 @@
+const { BRAIN } = require('../common/brain.enum')
 const mockApi = {
     fetchData: async () => {
         try {
-            const response = await fetch('https://651ec35444a3a8aa4768f653.mockapi.io/brain/');
+            const response = await fetch(BRAIN.brainUrl);
             if (!response.ok) {
                 throw new Error('Error al obtener datos de la API');
             }

@@ -7,20 +7,21 @@ class NlpLoader {
         this.nlpProcessor = new NlpProcessor();
     }
 
-    /*     // Carga ejemplos de entrenamiento desde la API
-        async loadTrainingData() {
-            try {
-                const data = await mockApi.fetchData();
-    
-                data.forEach(item => {
-                    this.nlpProcessor.loadTrainingData(item.intenciones, item.respuestas);
-                });
-    
-                console.log('Datos cargados desde la API exitosamente.');
-            } catch (error) {
-                console.error('Error al cargar los datos desde la API:', error.message);
-            }
-        } */
+    // Carga ejemplos de entrenamiento desde MockApi
+    async loadTrainingDataFromMockApi() {
+        try {
+            const data = await mockApi.fetchData();
+
+            data.forEach(item => {
+                this.nlpProcessor.loadTrainingData(item.intenciones, item.respuestas);
+            });
+
+            console.log('Datos cargados desde la API exitosamente.');
+        } catch (error) {
+            console.error('Error al cargar los datos desde la API:', error.message);
+        }
+    }
+    // Carga ejemplos de entrenamiento desde Firebase
     async loadTrainingDataFromFirebase() {
         try {
             const data = await firebaseApi.getBrainData()
