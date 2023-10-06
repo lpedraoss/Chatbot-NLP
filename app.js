@@ -10,7 +10,7 @@ const firebaseConfig = require('./firebaseConfig')
 // Crea una instancia de NlpLoader
 const nlpLoader = new NlpLoader();
 
-const flowBienvenida = addKeyword(EVENTS.WELCOME)
+const flowChatbot = addKeyword(EVENTS.WELCOME)
     .addAnswer(MSSG_STATE.ALTERN, {
         delay: 1000,
     }, async (ctx, { flowDynamic }) => {
@@ -41,7 +41,7 @@ const main = async () => {
     await nlpLoader.loadTrainingDataFromFirebase();
     /* await nlpLoader.modelTraining(); */
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowBienvenida])
+    const adapterFlow = createFlow([flowChatbot])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
