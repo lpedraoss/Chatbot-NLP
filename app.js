@@ -39,7 +39,7 @@ const main = async () => {
 
     // Entrena el modelo
     await nlpLoader.loadTrainingDataFromFirebase();
-    await nlpLoader.modelTraining();
+    /* await nlpLoader.modelTraining(); */
     const adapterDB = new MockAdapter()
     const adapterFlow = createFlow([flowBienvenida])
     const adapterProvider = createProvider(BaileysProvider)

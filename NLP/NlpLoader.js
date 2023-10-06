@@ -7,37 +7,25 @@ class NlpLoader {
         this.nlpProcessor = new NlpProcessor();
     }
 
-    // Carga ejemplos de entrenamiento desde MockApi
+    async loadTrainingDataFromApi(apiFunction) {
+        try {
+            const data = await apiFunction();
+            data.forEach(async item => {
+                this.nlpProcessor.loadTrainingData(item.intenciones, item.respuestas);
+                await this.nlpProcessor.modelTraining();
+            });
+            console.log('Datos cargados exitosamente.');
+        } catch (error) {
+            console.error('Error al cargar los datos:', error.message);
+        }
+    }
+
     async loadTrainingDataFromMockApi() {
-        try {
-            const data = await mockApi.fetchData();
-
-            data.forEach(item => {
-                this.nlpProcessor.loadTrainingData(item.intenciones, item.respuestas);
-            });
-
-            console.log('Datos cargados desde la API exitosamente.');
-        } catch (error) {
-            console.error('Error al cargar los datos desde la API:', error.message);
-        }
+        await this.loadTrainingDataFromApi(mockApi.fetchData.bind(mockApi));
     }
-    // Carga ejemplos de entrenamiento desde Firebase
+
     async loadTrainingDataFromFirebase() {
-        try {
-            const data = await firebaseApi.getBrainData()
-
-            data.forEach(item => {
-                this.nlpProcessor.loadTrainingData(item.intenciones, item.respuestas);
-            });
-
-            console.log('Datos cargados desde Firebase exitosamente.');
-        } catch (error) {
-            console.error('Error al cargar los datos desde Firebase:', error.message);
-        }
-    }
-
-    async modelTraining() {
-        await this.nlpProcessor.modelTraining();
+        await this.loadTrainingDataFromApi(firebaseApi.getBrainData.bind(firebaseApi));
     }
 
     async processMssg(texto) {

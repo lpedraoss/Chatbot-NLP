@@ -1,4 +1,3 @@
-// NlpProcessor.js
 const { NlpManager } = require('node-nlp');
 
 class NlpProcessor {
@@ -6,8 +5,8 @@ class NlpProcessor {
         this.manager = new NlpManager({ languages: ['es'] });
     }
 
-    async loadTrainingData(intenciones, respuestas) {
-        await intenciones.forEach((intencion, index) => {
+    loadTrainingData(intenciones, respuestas) {
+        intenciones.forEach((intencion, index) => {
             this.manager.addDocument('es', intencion, respuestas[index]);
         });
     }
@@ -17,19 +16,15 @@ class NlpProcessor {
         this.manager.save();
         console.log('Modelo entrenado y guardado.');
     }
+
     async processMssg(texto) {
-        const secund = await this.manager.process('es', 'hola')
-        const secundAns = await secund;
+        const secundAns = await this.manager.process('es', 'hola');
         console.log('adentro del prc', secundAns);
 
         const response = await this.manager.process('es', texto);
 
-        const intent = await response.intent;
-        const answer = await response.answer;
-
-        return intent.toString(); // Convertir la respuesta a un string.
+        return response.intent.toString(); // Convertir la respuesta a un string.
     }
-
 }
 
 module.exports = NlpProcessor;
