@@ -5,8 +5,6 @@ const BaileysProvider = require('@bot-whatsapp/provider/baileys');
 const MockAdapter = require('@bot-whatsapp/database/mock');
 const { MSSG_STATE } = require('./common/mssg.enum');
 const NlpLoader = require('./NLP/NlpLoader');
-const { initializeApp } = require('firebase/app');
-const firebaseConfig = require('./firebaseConfig')
 // Crea una instancia de NlpLoader
 const nlpLoader = new NlpLoader();
 

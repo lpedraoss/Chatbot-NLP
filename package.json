@@ -26,5 +26,9 @@
         "wa-sticker-formatter": "4.3.2"
     },
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "devDependencies": {
+        "jest": "^29.7.0",
+        "mock-stdin": "^1.0.0"
+    }
 }

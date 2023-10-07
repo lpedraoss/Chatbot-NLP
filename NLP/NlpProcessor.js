@@ -18,8 +18,6 @@ class NlpProcessor {
     }
 
     async processMssg(texto) {
-        const secundAns = await this.manager.process('es', 'hola');
-        console.log('adentro del prc', secundAns);
 
         const response = await this.manager.process('es', texto);
 
