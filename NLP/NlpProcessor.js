@@ -18,7 +18,6 @@ class NlpProcessor {
     }
 
     async processMssg(texto) {
-
         const response = await this.manager.process('es', texto);
 
         return response.intent.toString(); // Convertir la respuesta a un string.

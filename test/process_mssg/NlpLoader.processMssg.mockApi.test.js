@@ -1,5 +1,5 @@
 const NlpLoader = require('../../NLP/NlpLoader');
-const expectedFacultyResponses = require('../response/preguntasFacultad.json')
+const expectedFacultyResponses = require('../response/facultResponse.json')
 /* TO DO
   - SALUDOS
   - DESPEDIDAS
